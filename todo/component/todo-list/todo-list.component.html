@@ -1,0 +1,10 @@
+<div *ngif="tasks.length != 0 ; else msg">
+    <ul>
+        <li *ngfor="let task of tasks">
+            <app-todo-item [task]="task"></app-todo-item>
+        </li>
+    </ul>
+</div>
+<ng-template #msg>
+    <p>you don't have any task</p>
+</ng-template>
